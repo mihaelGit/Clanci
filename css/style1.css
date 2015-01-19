@@ -1,0 +1,419 @@
+/**********************/
+/***** MAIN STYLE *****/
+/**********************/
+*{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrapper{
+    margin: 1em auto;
+    width: 80%;   
+    max-width: 1000px;
+    /*border: 2px #02D0E3 solid;*/
+    box-shadow: 0px 0px 3px #A9D0F5;
+    border-top-left-radius: 10px;
+}
+
+#menuBar{
+    width: 100%;
+    background: #2E9AFE;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/******************************************************************************/
+
+/************************/
+/***** HEADER STYLE *****/
+/************************/
+
+header{
+    background-color: white;
+}
+
+#pageName{
+    background: #2E9AFE;
+    width: 60%;
+    text-align: center;
+    float: left;
+    box-shadow: 0px 0px 2px black;
+}
+
+#pageName h1{
+   font-size: 4.0em;
+   padding: 0.5em;
+   color: white;
+   text-shadow: 1px 1px 2px white;
+}
+
+#regLog{
+    float: left;
+    width: 40%;
+    text-align: right;
+}
+
+#regLog p{
+    text-align: right;
+    padding: 0.5em 0.5em;
+    font-size: 1em;
+    color: gray;
+}
+
+#regLog a{
+    font-size: 1.5em;
+    float: right;
+    display: block;
+    padding: 0.3em 0.3em;
+    width: 4em;
+    text-align: center;
+    color: #2E9AFE;
+    text-shadow: 0px 1px 2px #2E9AFE;
+    box-shadow: 0px 0px 3px #A9D0F5;
+}
+
+#regLog a.options{
+    font-size: 1em;
+    float: right;
+    display: block;
+    padding: 0.3em 0.3em;
+    width: 4em;
+    text-align: center;
+    color: #2E9AFE;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+#regLog ul li{
+    list-style: none;
+}
+
+#regLog a:hover{
+    background-color: #EFF8FB;
+}
+
+#regLog a:active{
+    padding: 0.15em 0.15em;
+    margin: 0.15em 0.15em;
+}
+/******************************************************************************/
+
+/*********************/
+/***** NAV STYLE *****/
+/*********************/
+nav{
+    background-color: #A9D0F5;
+}
+
+nav ul{
+    -webkit-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+nav ul li{
+    float: left;
+    border-right: 1px solid white;
+}
+
+nav ul li a{
+    display: block;
+    padding: 0.3em 0.3em;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 2px #2E9AFE;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color: #EFF8FB;
+}
+
+nav ul li a:active{
+    padding: 0.15em 0.15em;
+    margin: 0.15em 0.15em;
+}
+/******************************************************************************/
+
+/*************************/
+/***** CONTENT STYLE *****/
+/*************************/
+#contentNew{
+    /*margin: 0.5em;
+    border: 2px black solid;*/
+    padding-top: 0.5em;
+}
+
+.article{
+    width: 31.33%;
+    float: left;
+    padding: 0.5% 0.5%;
+    margin: 0em 0.5% 0.5em 0.5%;
+    box-shadow: 0px 0px 1px #A9D0F5;
+}
+
+.article h2{
+    color: #2E9AFE;
+}
+
+.article p{
+    font-size: 0.8em;
+    color: gray;
+}
+
+.article:hover{
+    background-color: #EFF8FB;
+}
+/******************************************************************************/
+
+/************************/
+/***** FOOTER STYLE *****/
+/************************/
+footer{
+    padding: 0.5em 1em;
+    position:relative;
+    bottom:0;
+    left:0;
+    background-color: #A9D0F5;
+}
+
+footer p{
+    color: white;
+    text-shadow: 1px 1px 2px #2E9AFE;
+}
+/******************************************************************************/
+
+/******************************/
+/***** MODAL WINDOW STYLE *****/
+/******************************/
+
+#modalLogin, #modalRegister{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.modalCover{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(169,208,245,0.75);
+    z-index: 3;
+}
+
+.modalContent{
+    position: relative;
+    margin: 1em auto;
+    background-color: white;
+    padding: 1em;
+    width: 70%;
+    max-width: 400px;
+    z-index: 4;
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+.modalContent form{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modalContent input[type=text], .modalContent input[type=password]{
+    width: 90%;
+    margin: 2.5%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    border: none;
+    padding: 2.5%;
+    outline: none;
+}
+
+.modalContent input[type=submit]{
+    width: 94%;
+    margin: 2.5%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    background-color: white;
+    border: none;
+    padding: 2.5%;
+    color: #2E9AFE;
+    text-shadow: 0px 1px 2px #2E9AFE;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modalContent input[type=submit]:active{
+    width: 94%;
+    padding: 2% 2%;
+    margin: 3%;
+}
+
+.modalContent input:focus{
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+.modalContent input:hover{
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+/***** CHROME ONLY *****/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    .modalContent input[type=text], .modalContent input[type=password]{
+    width: 90%;
+    margin: 2.5%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    border: none;
+    padding: 0% 2.5%;
+    outline: none;
+    }
+}
+/***********************/
+/******************************************************************************/
+
+/*********************/
+/* MEDIUM RESOLUTION */
+/*********************/
+@media only screen and (min-width: 150px) and (max-width: 1050px){
+    
+    #wrapper{
+        width: 85%;
+    }
+}
+@media only screen and (min-width: 150px) and (max-width: 900px){
+    
+    #wrapper{
+        width: 95%;
+    }
+    /********/
+    /* HEAD */
+    /********/
+    #pageName{
+        width: 70%;
+    }
+    
+    #regLog{
+        width: 30%
+    }
+    /**********************************************************************/
+    
+    /***********/
+    /* CONTENT */
+    /***********/
+    .article{
+    width: 48%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin: 0em 0.5% 0.5em 0.5%;
+    }
+    /**********************************************************************/
+}
+/******************************************************************************/
+
+/*********************/
+/* MICRO RESOLUTION */
+/*********************/
+@media only screen and (min-width: 150px) and (max-width: 665px){
+    
+    #wrapper{
+        margin-top: 0.5em;
+        box-shadow: none;
+        margin-bottom: 0em;
+    }
+    
+    /**********/
+    /* HEADER */
+    /**********/
+    #pageName{
+        width: 100%;
+    }
+    
+    #pageName h1{
+        font-size: 2.5em;
+        padding: 0.5em;
+    }
+    
+    #regLog{
+        width: 100%;
+    }
+
+    
+    #regLog a{
+        float: left;
+    }
+    
+    #regLog a.options:hover{
+        background-color: #EFF8FB;
+        padding: 0.2em 0.2em;
+        margin: 0.1em 0.1em;
+    }
+    
+    #regLog a.options:active{
+        padding: 0.1em 0.1em;
+        margin: 0.2em 0.2em;
+    }
+    
+    #regLog ul li{
+        float: left;
+    }   
+    
+    #regLog a:hover{
+        background-color: white;
+        padding: 0.15em 0.15em;
+        margin: 0.15em 0.15em;
+    }
+
+    #regLog a:active{
+        padding: 0.1em 0.1em;
+        margin: 0.2em 0.2em;
+    }
+    /**********************************************************************/
+    
+    /**************/
+    /* NAVIGATION */
+    /**************/
+    nav ul li{
+        width: 100%;
+        border-right: none;
+    }
+    
+    nav ul{
+        height: 0;
+    }
+    
+    .showing{
+        height: 215px;
+    }
+    
+    #menuBar{
+        display: block;
+        font-size: 20px; 
+        color: white;
+        text-align: center;
+    }
+    /**********************************************************************/
+}
+
+@media only screen and (min-width: 150px) and (max-width: 500px){
+    .article{
+        width: 98%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        margin: 0em 0.5% 0.5em 0.5%;
+    }
+}
+/******************************************************************************/

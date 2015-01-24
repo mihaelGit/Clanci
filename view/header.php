@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -100,26 +97,3 @@ session_start();
                 <div id="menuBar" onclick="go();"> <i id="menuIcon" class="fa fa-bars" style="font-size: 20px; color: white;"></i> </div>
             </nav>
 <!--*************************************************************************-->
-<!--*********-->
-<!-- CONTENT -->
-<!--*********-->
-            <div id="contentNew">
-                <?php for($i = 0; $i < 21 ; $i++){?>
-                    <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <?php } ?>     
-            </div>
-<!--*************************************************************************-->
-        </div><!-- Wrapper ends -->
-<!--********-->
-<!-- FOOTER -->
-<!--********-->
-        <footer>
-            <p>Copyright &copy; 2015 <a href="#">clickhere.com</a></p>
-        </footer>
-<!--*************************************************************************-->
-    </body>
-</html>

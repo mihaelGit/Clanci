@@ -13,8 +13,8 @@ if($_POST){
 
     if($test->isValid()){
         session_start();
-        $_SESSION["user"] = $test->sessinData();
-        print_r($_SESSION["user"]);
+        $_SESSION["user"] = $test->sessionData();
+       // print_r($_SESSION["user"]);
         header('Location: ../index.php');exit;
     }
 }

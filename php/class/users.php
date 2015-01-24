@@ -3,6 +3,7 @@ class user{
     
     private $id;
     private $username;
+    private $mail;
     private $firstName;
     private $lastName;
     private $role;
@@ -11,7 +12,7 @@ class user{
     
     function __construct($username, $password, mysqli $conn){
         
-        $queryString = "SELECT id, username, firstName, lastName, role "
+        $queryString = "SELECT id, username, mail, firstName, lastName, role "
                 . "FROM users "
                 . "WHERE username = '".$username."' AND password = SHA1('".$password."') LIMIT 1;";
         
@@ -21,6 +22,7 @@ class user{
             $row = $data->fetch_assoc();
             $this->id = $row["id"];
             $this->username = $row["username"];
+            $this->mail = $row["mail"];
             $this->firstName = $row["firstName"];
             $this->lastName = $row["lastName"];
             $this->role = $row["role"];
@@ -35,15 +37,16 @@ class user{
         return $this->valid;
     }
     
-    public function sessinData(){
-        $sessinData = array(
+    public function sessionData(){
+        $sessionData = array(
             "id" => $this->id,
             "username" => $this->username,
+            "mail" => $this->mail,
             "firstName" => $this->firstName,
             "lastName" => $this->lastName,
             "role" => $this->role
         );
         
-        return $sessinData;
+        return $sessionData;
     }
 }

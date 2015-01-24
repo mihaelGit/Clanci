@@ -209,7 +209,9 @@ footer p{
 /***** MODAL WINDOW STYLE *****/
 /******************************/
 
-#modalLogin, #modalRegister{
+#modalLogin, 
+#modalSubmitArticle,
+#modalRegister{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -234,6 +236,7 @@ footer p{
     max-width: 400px;
     z-index: 4;
     box-shadow: 0px 0px 2px #2E9AFE;
+    border-radius: 5px;
 }
 
 .modalContent form{
@@ -243,16 +246,61 @@ footer p{
 
 .modalContent input[type=text],
 .modalContent input[type=email],
-.modalContent input[type=password]{
+.modalContent input[type=password],
+.modalContent input[type=file]{
     width: 90%;
     margin: 2.5%;
     box-shadow: 0px 0px 2px #A9D0F5;
     border: none;
     padding: 2.5%;
     outline: none;
+    border-radius: 3px;
+}
+
+select{
+    width: 95%;
+    padding: 0.5em 2.5%;
+    margin: 2.5%;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px #A9D0F5;
+}
+
+select:hover{
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+select:active{
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+select option{
+    outline: none;
+    border: none;
+}
+
+textarea{
+    padding: 0.5em 2.5%;
+    margin: 2.5%;
+    width: 90%;
+    min-height: 7em;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px #A9D0F5;
+}
+
+textarea:hover{
+    box-shadow: 0px 0px 2px #2E9AFE;
+}
+
+textarea:focus{
+    box-shadow: 0px 0px 2px #2E9AFE;
 }
 
 .modalContent input[type=submit]{
+    border-radius: 3px;
     width: 94%;
     margin: 2.5%;
     box-shadow: 0px 0px 2px #A9D0F5;

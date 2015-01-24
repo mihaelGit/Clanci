@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,29 +7,7 @@ session_start();
         <meta name="viewport" content="width-device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style1.css" type="text/css" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<!--************-->
-<!-- JAVASCRIPT -->
-<!--************-->
-        <script type="text/javascript">
-            function modalOn(idName){
-                document.getElementById(idName).style.display = 'block';
-            }
-            function modalCancel(idName){
-                document.getElementById(idName).style.display = 'none';
-            }
-            function go(){
-                if(document.getElementById("navOptions").className != "showing"){
-                    document.getElementById("navOptions").className = "showing";
-                    document.getElementById("menuIcon").className = "fa fa-bars fa-rotate-90";
-                }
-                else{
-                    document.getElementById("navOptions").className = "";
-                    document.getElementById("menuIcon").className = "fa fa-bars";
-                }
-            }
-
-        </script>
-<!--*************************************************************************-->
+        <script type="text/javascript" src="js/javaScript.js" ></script>
     </head>
     <body>
 <!--*******-->

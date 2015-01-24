@@ -235,7 +235,9 @@ footer p{
     text-align: center;
 }
 
-.modalContent input[type=text], .modalContent input[type=password]{
+.modalContent input[type=text],
+.modalContent input[type=email],
+.modalContent input[type=password]{
     width: 90%;
     margin: 2.5%;
     box-shadow: 0px 0px 2px #A9D0F5;
@@ -273,13 +275,43 @@ footer p{
 
 /***** CHROME ONLY *****/
 @media screen and (-webkit-min-device-pixel-ratio:0) { 
-    .modalContent input[type=text], .modalContent input[type=password]{
+    .modalContent input[type=text],
+    .modalContent input[type=email],
+    .modalContent input[type=password]{
     width: 90%;
     margin: 2.5%;
     box-shadow: 0px 0px 2px #A9D0F5;
     border: none;
     padding: 0% 2.5%;
     outline: none;
+    }
+    
+    .modalContent input[type=submit]{
+    width: 94%;
+    margin: 2.5%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    background-color: white;
+    border: none;
+    padding: 2.5%;
+    color: #2E9AFE;
+    text-shadow: 0px 1px 2px #2E9AFE;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: none;
+    }
+
+    .modalContent input[type=submit]:active{
+        width: 94%;
+        padding: 2% 2%;
+        margin: 3%;
+    }
+        
+    .modalContent input:focus{
+    box-shadow: 0px 0px 2px #2E9AFE;
+    }
+
+    .modalContent input:hover{
+        box-shadow: 0px 0px 2px #2E9AFE;
     }
 }
 /***********************/

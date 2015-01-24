@@ -9,9 +9,9 @@ session_start();
         <meta name="viewport" content="width-device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style1.css" type="text/css" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<!---------------->
+<!--************-->
 <!-- JAVASCRIPT -->
-<!---------------->
+<!--************-->
         <script type="text/javascript">
             function modalOn(idName){
                 document.getElementById(idName).style.display = 'block';
@@ -31,12 +31,12 @@ session_start();
             }
 
         </script>
-<!----------------------------------------------------------------------------->
+<!--*************************************************************************-->
     </head>
     <body>
-<!----------->
+<!--*******-->
 <!-- MODAL -->
-<!----------->
+<!--*******-->
         <div id="modalLogin">
             <div class="modalCover" onclick="modalCancel('modalLogin')"></div>
             <div class="modalContent">
@@ -54,6 +54,7 @@ session_start();
                 <form action="" name="registerForm" method="post">
                     <input type="text" name="firstName" placeholder="First Name" />
                     <input type="text" name="lastName" placeholder="Last Name" />
+                    <input type="email" name="mail" placeholder="e-mail" />
                     <input type="text" name="username" placeholder="Username" />
                     <input type="password" name="password" placeholder="Password"/>
                     <input type="password" name="password" placeholder="Repeat Password"/>
@@ -62,11 +63,11 @@ session_start();
             </div>
         </div>
 
-<!----------------------------------------------------------------------------->
+<!--*************************************************************************-->
         <div id="wrapper">
-<!------------>
+<!--********-->
 <!-- HEADER --> 
-<!------------>
+<!--********-->
             <header>
                 <div id="pageName"><h1>Logo / Title</h1></div>
                 
@@ -84,10 +85,10 @@ session_start();
                     <?php } ?>
                 </div>
             </header> 
-<!----------------------------------------------------------------------------->
-<!--------->
+<!--*************************************************************************-->
+<!--*****-->
 <!-- NAV -->
-<!--------->
+<!--*****-->
             <nav>
                 <ul id="navOptions">
                     <li><a href="#"><i class="fa fa-home" style="font-size: 0.75em;"></i> Home</a></li>
@@ -98,141 +99,27 @@ session_start();
                 </ul>
                 <div id="menuBar" onclick="go();"> <i id="menuIcon" class="fa fa-bars" style="font-size: 20px; color: white;"></i> </div>
             </nav>
-<!----------------------------------------------------------------------------->
-<!------------->
+<!--*************************************************************************-->
+<!--*********-->
 <!-- CONTENT -->
-<!------------->
+<!--*********-->
             <div id="contentNew">
-                <div class="article">
+                <?php for($i = 0; $i < 20 ; $i++){?>
+                    <div class="article">
                     <h2>Article title</h2>
                     <p>Author: FirstName LastName</p>
                     <p>Published: 21.12.2015</p>
                 </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>     
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
-                <div class="article">
-                    <h2>Article title</h2>
-                    <p>Author: FirstName LastName</p>
-                    <p>Published: 21.12.2015</p>
-                </div>
+                <?php } ?>     
             </div>
-<!----------------------------------------------------------------------------->
+<!--*************************************************************************-->
         </div><!-- Wrapper ends -->
-<!------------>
+<!--********-->
 <!-- FOOTER -->
-<!------------>
+<!--********-->
         <footer>
             <p>Copyright &copy; 2015 <a href="#">clickhere.com</a></p>
         </footer>
-<!----------------------------------------------------------------------------->
+<!--*************************************************************************-->
     </body>
 </html>

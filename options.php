@@ -6,13 +6,13 @@ if(!isset($_SESSION["user"])){
 require 'view/header.php'; 
 
 switch ($_SESSION["user"]["role"]){
-    case 1: 
+    case 1: // ADMIN
         echo "<p>Admin</p>";
         break;
-    case 2: 
-        echo "<p>Author</p>";
+    case 2: // AUTHOR
+        include 'view/authorOptions.php';
         break;
-    case 3: 
+    case 3: // REVIEWER
         echo "<p>Reviewer</p>";
         break;
     default: break;

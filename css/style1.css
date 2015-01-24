@@ -7,9 +7,15 @@
     overflow: auto;
 }
 
+html{
+    background-color: #A9D0F5;
+}
+
 body{
     font-family: sans-serif;
     font-size: 1em;
+    background-color: white;
+    height: 100%;
 }
 
 a{
@@ -21,7 +27,6 @@ a{
     margin: 1em auto;
     width: 80%;   
     max-width: 1000px;
-    /*border: 2px #02D0E3 solid;*/
     box-shadow: 0px 0px 3px #A9D0F5;
     border-top-left-radius: 10px;
 }
@@ -186,10 +191,11 @@ nav ul li a:active{
 /***** FOOTER STYLE *****/
 /************************/
 footer{
-    padding: 0.5em 1em;
+    padding: 0.5em 1%;
+    width: 98%;
     position:relative;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     background-color: #A9D0F5;
 }
 

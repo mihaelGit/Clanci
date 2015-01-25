@@ -38,6 +38,6 @@
     </div>
 </div>
 <?php
-    unset($_SESSION["modalSubmitArticleError"]);
+    unset($_SESSION["SubmitArticleError"]);
     unset($_SESSION["SubmitArticleData"]);
 ?>

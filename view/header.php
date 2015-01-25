@@ -1,3 +1,4 @@
+<div id="outerWrapper">
 <div id="wrapper">
 <!--********-->
 <!-- HEADER --> 

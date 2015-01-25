@@ -11,7 +11,7 @@ html{
     background-color: #A9D0F5;
 }
 
-body{
+body, html{
     font-family: sans-serif;
     font-size: 1em;
     background-color: white;
@@ -23,8 +23,13 @@ a{
     color: inherit;
 }
 
+#outerWrapper{
+    min-height:100%;
+    position:relative;
+}
+
 #wrapper{
-    margin: 1em auto;
+    margin: 1em auto 5em auto;
     width: 80%;   
     max-width: 1000px;
     box-shadow: 0px 0px 3px #A9D0F5;
@@ -193,9 +198,10 @@ nav ul li a:active{
 footer{
     padding: 0.5em 1%;
     width: 98%;
-    position:relative;
+    position:absolute;
     bottom: 0;
     left: 0;
+    height: 3em;
     background-color: #A9D0F5;
 }
 
@@ -242,6 +248,11 @@ footer p{
 .modalContent form{
     margin: 0 auto;
     text-align: center;
+}
+
+p.formError{
+    font-size: 1em;
+    color: red;
 }
 
 .modalContent input[type=text],
@@ -418,7 +429,7 @@ textarea:focus{
     #wrapper{
         margin-top: 0.5em;
         box-shadow: none;
-        margin-bottom: 0em;
+        margin-bottom: 4em;
     }
     
     /**********/

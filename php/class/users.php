@@ -1,4 +1,8 @@
 <?php
+/*******************************************************/
+/* Klasa za rad s userima                              
+   Login primjer u php/login.php                       */
+/*******************************************************/
 class user{
     
     private $id;
@@ -9,7 +13,9 @@ class user{
     private $role;
     
     private $valid;
-    
+    /*********************************************************************************/
+    /* konstruktor dobiva username i pass stvara (ili ne ako je krivo) sesiju usera  */
+    /*********************************************************************************/
     function __construct($username, $password, mysqli $conn){
         
         $queryString = "SELECT id, username, mail, firstName, lastName, role "
@@ -33,10 +39,16 @@ class user{
         }
     }
     
+    /**********************************************************************/
+    /* funkcija vraca TRUE ako je korisnik unio ispravne podatke za login */
+    /**********************************************************************/
     public function isValid(){
         return $this->valid;
     }
     
+    /*******************************************************/
+    /* funkcija stvara sesiju                              */
+    /*******************************************************/
     public function sessionData(){
         $sessionData = array(
             "id" => $this->id,

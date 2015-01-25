@@ -255,6 +255,12 @@ p.formError{
     color: red;
 }
 
+p.segmentError{
+    font-size: 0.75em;
+    color: red;
+    text-align: left;
+}
+
 .modalContent input[type=text],
 .modalContent input[type=email],
 .modalContent input[type=password],

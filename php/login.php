@@ -1,5 +1,7 @@
 <?php
-
+/*****************************/
+/* postavljanje login sesije */
+/*****************************/
 if($_POST){
     require_once 'class/db.php';
     require_once 'class/users.php';
@@ -9,14 +11,13 @@ if($_POST){
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $test = new user($username, $password, $db->conn);
+    $test = new user($username, $password, $db->conn); // pkusa stvoriti usera
 
-    if($test->isValid()){
+    if($test->isValid()){ // ako je uspio stvara sesiju i vraca korisnika natrag
         session_start();
         $_SESSION["user"] = $test->sessionData();
-       // print_r($_SESSION["user"]);
         header('Location: ../index.php');exit;
-    }
+    } // treba dovrsiti neuspjesne loginove else{....
 }
 else{
     echo "Hmm something went wrong!";

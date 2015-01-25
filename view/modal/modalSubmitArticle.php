@@ -9,11 +9,27 @@
                     } 
                 ?>
             </p>
-            <input type="text" name="title" placeholder="Title" value="<?php  ?>" />
-            <textarea name="summary"></textarea>
+            <p>
+                <?php 
+                    if(isset($_SESSION["SubmitArticleError"]["title"])){
+                        echo $_SESSION["SubmitArticleError"]["title"];
+                    } 
+                ?>
+            </p>
+            <input type="text" name="title" placeholder="Title" value="<?php 
+            if(isset($_SESSION["SubmitArticleData"]["title"])){
+                echo $_SESSION["SubmitArticleData"]["title"];} 
+            ?>" />
+            <textarea name="summary"><?php 
+            if(isset($_SESSION["SubmitArticleData"]["summary"])){
+                echo $_SESSION["SubmitArticleData"]["summary"];} 
+            ?></textarea>
             <select name="category">
             <?php foreach($catList as $optVal){?>
-                <option value="<?php echo $optVal["id"] ?>"><?php echo $optVal["categoryName"] ?></option> 
+                <option value="<?php echo $optVal["id"] ?>" <?php 
+            if(isset($_SESSION["SubmitArticleData"]["category"]) && ($_SESSION["SubmitArticleData"]["category"]==$optVal["id"])){
+                echo "selected";} 
+            ?>><?php echo $optVal["categoryName"] ?></option> 
             <?php } ?>
             </select>
             <input type="file" name="file" />
@@ -23,4 +39,5 @@
 </div>
 <?php
     unset($_SESSION["modalSubmitArticleError"]);
+    unset($_SESSION["SubmitArticleData"]);
 ?>

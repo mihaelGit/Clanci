@@ -10,13 +10,14 @@ if($_POST){
     
     $username = $_POST["username"];
     $password = $_POST["password"];
+    
+    $users = new users($db->conn);
+    $users->login($username, $password); // pkusa stvoriti usera
 
-    $test = new user($username, $password, $db->conn); // pkusa stvoriti usera
-
-    if($test->isValid()){ // ako je uspio stvara sesiju i vraca korisnika natrag
+    if($users->isValid()){ // ako je uspio stvara sesiju i vraca korisnika natrag
         session_start();
-        $_SESSION["user"] = $test->sessionData();
-        header('Location: ../index.php');exit;
+        $_SESSION["user"] = $users->sessionData();
+        header('Location: ../home');exit;
     } // treba dovrsiti neuspjesne loginove else{....
 }
 else{

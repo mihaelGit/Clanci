@@ -23,22 +23,15 @@ $categoriesObject = new categories($db->conn);
 $catList = $categoriesObject->getSelectList(); // dobiva listu kategorija za option value mozda prebaciti?
 
 require 'view/htmlHead.php';
+require 'view/header.php';
 
 switch ($_SESSION["user"]["role"]){
     case 1: // ADMIN
-        require 'view/header.php';
-        require 'view/adminOptions.php';
+        require 'view/forReviewForm.php';
         break;
-    case 2: // AUTHOR
-        require 'view/modal/modalSubmitArticle.php';
-        require 'view/header.php';
-        require 'view/authorOptions.php';
-    break;
-    case 3: // REVIEWER
-        require 'view/header.php';
-        require 'view/reviewOptions.php';
+    default: 
+        echo 'Something went wrong :(';
         break;
-    default: break;
 }
 
 require 'view/footer.php'; 

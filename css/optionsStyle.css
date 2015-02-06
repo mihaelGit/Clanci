@@ -1,0 +1,280 @@
+/**************************/
+/***** AUTHOR OPTIONS *****/
+/******************************************************************************/
+#leftBar{
+    width: 20%;
+    float: left;
+    padding-top: 0.25em;
+    //background-color: #666;
+}
+
+#rightBar{
+    width: 79%;
+    float:left;
+    padding: 0.5em 0.5% 0 0.5%;
+    //background-color: #999;
+}
+
+#rightBar ul li{
+    float: left;
+    margin-right: 0.1em;
+    padding: 0.25em;
+    background-color: #A9D0F5;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 0.25em 0.25em 0 0;
+    text-shadow: 1px 1px 2px #2E9AFE;
+    cursor: pointer;
+    border-bottom: 0.25em solid #A9D0F5;
+}
+
+#rightBar ul li:hover{
+    background-color: #EFF8FB;
+}
+
+#rightBar ul li.selected{
+    border-bottom: 0.25em solid #2E9AFE;
+}
+
+#published,
+#underReview,
+#returned{
+    width: 99%;
+    margin-bottom: 0.25em;
+    min-height: 25em;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    padding: 0.5%;
+}
+
+#underReview,
+#returned{
+    display: none;
+}
+
+#uploadBox{
+    width: 96%;
+    margin: 2%;
+    height: 4em;
+    padding: 1em 0;
+    text-align: center;
+    color: #2E9AFE;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    margin-bottom: 0.4em;
+}
+
+#uploadBox:hover{
+    background-color: #EFF8FB;
+}
+#uploadBox:active{
+    background-color: white;
+}
+
+#newsBox{
+    width: 96%;
+    margin: 2%;
+    height: 200px;
+    box-shadow: 0px 0px 3px #A9D0F5;
+}
+
+#newsBox h3{
+    padding-top: 0.25em;
+    color: #2E9AFE;
+    text-align: center;
+}
+
+#rightBar table{
+    width:100%;
+}
+#rightBar table tr{
+    
+}
+#rightBar table tr td{
+    border: 1px solid #2E9AFE;
+    padding: 0.2em;
+}
+#rightBar table tr td a{
+    color: #2E9AFE;
+}
+
+#rightBar table tr.data:hover{
+    background-color: #EFF8FB;
+}
+
+#rightBar table td:hover{
+    background-color: #A9D0F5;
+}
+/*************************/
+/***** ADMIN OPTIONS *****/
+/******************************************************************************/
+
+#adminBar{
+    padding: 0.25em;
+    padding-top: 0.4em;
+}
+
+#adminBar ul li{
+    float: left;
+    margin-right: 0.1em;
+    padding: 0.25em;
+    background-color: #A9D0F5;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 0.25em 0.25em 0 0;
+    text-shadow: 1px 1px 2px #2E9AFE;
+    cursor: pointer;
+    border-bottom: 0.25em solid #A9D0F5;
+}
+
+#adminBar ul li:hover{
+    background-color: #EFF8FB;
+}
+
+#adminBar ul li.selected{
+    border-bottom: 0.25em solid #2E9AFE;
+}
+
+#publish,
+#forReview,
+#promote,
+#members,
+#articles{
+    width: 99%;
+    margin-bottom: 0.25em;
+    min-height: 25em;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    padding: 0.5%;
+}
+
+#forReview,
+#promote,
+#members,
+#articles{
+    display: none;
+}
+
+#adminBar table{
+    width:100%;
+}
+#adminBar table tr{
+    
+}
+#adminBar table tr td{
+    border: 1px solid #2E9AFE;
+    padding: 0.2em;
+}
+#adminBar table tr td a{
+    color: #2E9AFE;
+}
+
+#adminBar table tr.data:hover{
+    background-color: #EFF8FB;
+}
+
+#adminBar table td:hover{
+    background-color: #A9D0F5;
+}
+
+/* forReview */
+
+#articleForReview{
+    float: left;
+    margin: 0.5em;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    width:60%;
+}
+
+#articleForReview table{
+    margin: 0.5em;
+}
+
+
+#articleForReview table td.info{
+    color: #999;
+}
+
+
+#articleForReview a{
+    color: #2E9AFE;
+}
+#forReviewForm{
+    float:left;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    width: 35%;
+}
+#forReviewForm p.formSelectReviewer{
+    padding: 0.25em;
+    font-size: 0.75em;
+    color: #999;
+}
+
+#forReviewForm input[type=submit]{
+    border-radius: 3px;
+    width: 95%;
+    margin: 2.5%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    background-color: white;
+    border: none;
+    padding: 2.5%;
+    color: #2E9AFE;
+    text-shadow: 0px 1px 2px #2E9AFE;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: none;
+}
+
+#forReviewForm input[type=submit]:hover{
+    background-color: #EFF8FB;
+}
+
+#forReviewForm input[type=submit]:active{
+    background-color: white;
+}
+
+/**************************/
+/***** REVIEW OPTIONS *****/
+/******************************************************************************/
+
+#reviewBar{
+    padding: 0.25em;
+    padding-top: 0.4em;
+}
+
+#reviewBar ul li{
+    float: left;
+    margin-right: 0.1em;
+    padding: 0.25em;
+    background-color: #A9D0F5;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 0.25em 0.25em 0 0;
+    text-shadow: 1px 1px 2px #2E9AFE;
+    cursor: pointer;
+    border-bottom: 0.25em solid #A9D0F5;
+}
+
+#reviewBar ul li:hover{
+    background-color: #EFF8FB;
+}
+
+#reviewBar ul li.selected{
+    border-bottom: 0.25em solid #2E9AFE;
+}
+
+#review,
+#corrections,
+#finished{
+    width: 99%;
+    margin-bottom: 0.25em;
+    min-height: 25em;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    padding: 0.5%;
+}
+
+#corrections,
+#finished{
+    display: none;
+}

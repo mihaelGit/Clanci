@@ -8,7 +8,7 @@
 <div id="modalSubmitArticle" style="<?php if(isset($_SESSION["SubmitArticleError"])){echo "display:block";} ?>">
     <div class="modalCover" onclick="modalCancel('modalSubmitArticle')"></div>
     <div class="modalContent">
-        <form action="php/uploadArticle.php" name="submitArticleForm" method="post" enctype="multipart/form-data">
+        <form action="<?php echo $path; ?>php/uploadArticle.php" name="submitArticleForm" method="post" enctype="multipart/form-data">
             <p class="formError">
                 <?php 
                     if(isset($_SESSION["SubmitArticleError"]["empty"])){

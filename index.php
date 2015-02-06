@@ -52,7 +52,7 @@
                     <?php if(isset($_SESSION["user"])){?>
                     <p><i class="fa fa-user"></i> <?php echo "Hello ".$_SESSION["user"]["firstName"]; ?></p>
                     <a class="options" href="php/logout.php"><i class="fa fa-key"></i> LogOut</a>
-                    <a class="options" href="options.php"><i class="fa fa-pencil-square-o"></i> Options</a>    
+                    <a class="options" href="options"><i class="fa fa-pencil-square-o"></i> Options</a>    
                     <?php }
                     else{?>
                     <ul>
@@ -68,7 +68,7 @@
 <!--*****-->
             <nav>
                 <ul id="navOptions">
-                    <li><a href="index.php"><i class="fa fa-home" style="font-size: 0.75em;"></i> Home</a></li>
+                    <li><a href="home"><i class="fa fa-home" style="font-size: 0.75em;"></i> Home</a></li>
                     <li><a href="#"><i class="fa fa-list" style="font-size: 0.75em;"></i> Categories</a></li>
                     <li><a href="#"><i class="fa fa-search" style="font-size: 0.75em;"></i> Search</a></li>
                     <li><a href="#"><i class="fa fa-envelope-o" style="font-size: 0.75em;"></i> Contact</a></li>

@@ -127,6 +127,8 @@ header{
 /*********************/
 nav{
     background-color: #A9D0F5;
+    border-bottom: 0.25em solid #2E9AFE;
+    border-top: 0.1em solid white;
 }
 
 nav ul{

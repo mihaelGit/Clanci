@@ -38,7 +38,7 @@ class article{
     /**************************************/
     function getArticlesUnderReview($user_ID){
         
-        $query = "SELECT title, submitTime, filePath FROM articles WHERE user_ID = $user_ID AND status IN (1,2)";
+        $query = "SELECT title, submitTime, filePath FROM articles WHERE user_ID = $user_ID AND status IN (1,2,4)";
         $rows = $this->conn->query($query);
         
         $data = array();
@@ -171,7 +171,77 @@ class article{
        $query = "SELECT title, filePath, summary, articles.id AS articles_id "
                . "FROM articles "
                . "INNER JOIN article_reviewer ON articles.id = article_reviewer.article_ID "
-               . "WHERE article_reviewer.user_ID = 4";
+               . "WHERE article_reviewer.user_ID = $userID AND articles.status = 2";
+        
+        $rows = $this->conn->query($query);
+        
+        $data = array();
+        
+        if($rows->num_rows > 0){
+            while($row = $rows->fetch_assoc()){
+                $data[]=$row;
+            }
+            return $data;
+        }
+        else{
+            return $data;
+        }
+        
+    }
+    
+    /**************************************/
+    /* funkcija za submit recenzije       */
+    /**************************************/
+    function submitReview($articles_id, $status, $review){
+        
+        $query = "UPDATE articles SET status = $status, review = '".$review."' WHERE id = $articles_id ";
+        
+        if($this->conn->query($query) === TRUE){
+           return TRUE;
+        }
+        else{
+           return FALSE;
+        }  
+        
+    }
+    
+    /**************************************/
+    /* funkcija povlaci clanke dodjeljene
+       recenzentu koji nijsu prosli review*/
+    /**************************************/
+    function returnedArticlestOfReviewer($userID){
+        
+       $query = "SELECT title, filePath, summary, articles.id AS articles_id "
+               . "FROM articles "
+               . "INNER JOIN article_reviewer ON articles.id = article_reviewer.article_ID "
+               . "WHERE article_reviewer.user_ID = $userID AND articles.status = 3";
+        
+        $rows = $this->conn->query($query);
+        
+        $data = array();
+        
+        if($rows->num_rows > 0){
+            while($row = $rows->fetch_assoc()){
+                $data[]=$row;
+            }
+            return $data;
+        }
+        else{
+            return $data;
+        }
+        
+    }
+    
+    /**************************************/
+    /* funkcija povlaci clanke dodjeljene
+       recenzentu koji nijsu prosli review*/
+    /**************************************/
+    function passedArticlestOfReviewer($userID){
+        
+       $query = "SELECT title, filePath, summary, articles.id AS articles_id "
+               . "FROM articles "
+               . "INNER JOIN article_reviewer ON articles.id = article_reviewer.article_ID "
+               . "WHERE article_reviewer.user_ID = $userID AND articles.status IN (4,5)";
         
         $rows = $this->conn->query($query);
         

@@ -3,3 +3,4 @@ RewriteBase /gitClanci
 RewriteRule ^home$|^index$ index.php [L]
 RewriteRule ^options$ options.php [L]
 RewriteRule ^forReview/(.*)$ forReview.php?id=$1 [L]
+RewriteRule ^makeReview/(.*)$ makeReview.php?id=$1 [L]

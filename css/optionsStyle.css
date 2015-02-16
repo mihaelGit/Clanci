@@ -278,3 +278,98 @@
 #finished{
     display: none;
 }
+
+#reviewBar table{
+    width:100%;
+}
+#reviewBar table tr{
+    
+}
+#reviewBar table tr td{
+    border: 1px solid #2E9AFE;
+    padding: 0.2em;
+}
+#reviewBar table tr td a{
+    color: #2E9AFE;
+}
+
+#reviewBar table tr.data:hover{
+    background-color: #EFF8FB;
+}
+
+#reviewBar table td:hover{
+    background-color: #A9D0F5;
+}
+
+/* FORM */
+
+#makeReviewForm{
+    /*float:left;*/
+    margin: 0.5em auto;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    width: 93.5%;
+    padding: 0.5em;
+    background-color: #EFF8FB;
+    border-bottom: 0.25em solid #2E9AFE;
+}
+#makeReviewForm p{
+    padding-left: 0.5em;
+}
+#makeReviewForm p.instructions{
+    padding: 0.25em;
+    font-size: 0.75em;
+    color: #666;
+}
+
+#makeReviewForm textarea{
+    height: 15em;
+    width: 80%;
+    margin: 0 0 0 0.5em;
+    padding: 0.5em;
+}
+
+#makeReviewForm input[type=submit]{
+    border-radius: 3px;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 0px 0px 2px #A9D0F5;
+    background-color: white;
+    border: none;
+    padding: 2.5%;
+    color: #2E9AFE;
+    text-shadow: 0px 1px 2px #2E9AFE;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline: none;
+}
+
+#makeReviewForm input[type=submit]:hover{
+    background-color: #EFF8FB;
+}
+
+#makeReviewForm input[type=submit]:active{
+    background-color: white;
+}
+
+#articleMakeReview{
+    /*float: left;*/
+    margin: 0.5em auto;
+    box-shadow: 0px 0px 3px #A9D0F5;
+    width:95%;
+    border-bottom: 0.25em solid #2E9AFE;
+    background-color: #EFF8FB;
+}
+
+#articleMakeReview table{
+    margin: 0.5em;
+}
+
+
+#articleMakeReview table td.info{
+    color: #999;
+}
+
+
+#articleMakeReview a{
+    color: #2E9AFE;
+}

@@ -8,22 +8,21 @@
         <li onclick="tabPick('underReview', this)">Under Review</li>
         <li onclick="tabPick('returned', this)">Returned for corrections</li>
     </ul>
+    <div id="published"><p>Tab for published</p></div>
     <?php
         $articleList = $articles->getArticlesUnderReview($_SESSION['user']['id']);
     ?>
-    <div id="published"><p>Tab for published</p></div>
     <div id="underReview">
         <?php 
             if(sizeof($articleList) > 0){ ?>
         <table>
-            <tr><th>Title</th><th>File</th><th>Submit time</th><th></th></tr>
+            <tr><th>Title</th><th>File</th><th>Submit time</th></tr>
         <?php
                 foreach($articleList as $x){ ?>
             <tr class="data">
                 <td><?php echo $x["title"]; ?></td>
                 <td><?php echo '<a href="articles/'.$x["filePath"].'" target="_blank">'.$x["filePath"].'</a>'; ?></td>
                 <td><?php echo $x["submitTime"]; ?></td>
-                <td style="text-align: center"><i class="fa fa-trash-o"></i></td>
             </tr>
         <?php }?>
         </table>    
